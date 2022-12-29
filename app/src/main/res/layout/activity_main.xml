@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding = "10dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/takePictureBtn"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="5dp"
+            app:icon="@drawable/ic_baseline_add_a_photo_24"
+            android:text="Take a picture"
+            android:textAllCaps="false"
+            android:layout_height="wrap_content"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/recognizeTextBtn"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            app:icon="@drawable/ic_baseline_document_scanner_24"
+            android:layout_marginStart="5dp"
+            android:text="Recognize text"
+            android:textAllCaps="false"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_image_24"
+                android:adjustViewBounds="true"
+                app:strokeWidth="2dp"
+                android:id="@+id/imageIv"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Recognize Text: "
+                style="@style/TextAppearance.MaterialComponents.Headline6"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recognizeTextEdit"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
